@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/.htaccess" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/abstractdatabase_class.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/jquery-1.10.2.min.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/.htaccess" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/config_class.php" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

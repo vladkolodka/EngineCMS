@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Как создать свой сайт</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" href="styles/main.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var w = $(window).width();
+			if (w <= 768) {
+				$("#left").html($("#left").html() + $("#right").html());
+				$("#right").remove();
+			}
+			if (w <= 600) {
+				var h2 = $("#course h2");
+				$("#course h2").remove();
+				$(h2).prependTo("#course");
+			}
+			if (w <= 468) {
+				$("#top_sep").replaceWith("<br /><br />");
+			}
+		});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>&lt;MyRusakov.ru /&gt;</h1>
+			<nav>
+				<ul id="topmenu">
+					<li>
+						<a href="#">
+							<span>Главная</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="active">
+							<span>Об авторе</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Служба поддержки</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Форум</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Стол заказов</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Тесты</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span>Мой блог</span>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<div id="top">
+			<div class="clear"></div>
+			<div id="search">
+				<form name="search" action="#" method="get">
+					<table>
+						<tr>
+							<td>
+								<input type="text" name="query" placeholder="Поиск" />
+							</td>
+							<td>
+								<input type="submit" name="search" value="" />
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div id="auth">
+				<form name="auth" action="#" method="post">
+					<div>
+						<input type="text" name="login" placeholder="Логин" />
+						<input type="password" name="password" placeholder="Пароль" />
+						<input type="submit" name="auth" value="Войти" />
+					</div>
+				</form>
+				<img src="images/bg_item_top.png" alt="" id="top_sep" />
+				<img src="images/icon_register.png" alt="" id="icon_register" />
+				<a href="#" id="link_register">Регистрация</a>
+				<img src="images/bg_item_top.png" alt="" />
+				<div id="links_reset">
+					<a href="#">Забыли пароль?</a>
+					<a href="#">Забыли логин?</a>
+				</div>
+			</div>
+		</div>
+		<div id="slider">
+			<div id="course">
+				<img src="images/php-cover.png" alt="PHP и MySQL с Нуля до Гуру" />
+				<h2>PHP и MySQL с Нуля до Гуру</h2>
+				<section>
+					<p>Видеокурс "<b>PHP и MySQL с Нуля до Гуру</b>" - это <b>более 20-ти часов видеоуроков по изучению PHP и MySQL</b> с точки зрения создания сайтов.</p>
+					<p>Ключевой момент курса - это <b>создание движка для сайта с нуля</b>. Никакого готового кода, никаких готовых скриптов, а только всё с нуля и прямо на Ваших глазах. Каждая строчка комментируется. Но, главное, я рассказываю о своём подходе <b>при создании движков</b>. Этот подход универсален и оптимален для сайтов любой функциональности: будь то социальная сеть или будь то поисковая система.</p>
+					<a class="more" href="#">Подробнее</a>
+				</section>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="content">
+			<div id="left">
+				<div class="block">
+					<div class="header">Уроки и статьи</div>
+					<div class="content">
+						<nav>
+							<div>
+								<a class="active" href="#">HTML</a>
+								<div>
+									<a href="#">HTML Основы</a>
+								</div>
+								<div>
+									<a href="#">HTML5</a>
+								</div>
+							</div>
+							<div>
+								<a href="#">CSS</a>
+							</div>
+							<div>
+								<a href="#">JavaScript</a>
+							</div>
+							<div>
+								<a href="#">PHP</a>
+							</div>
+							<div>
+								<a href="#">MySQL</a>
+							</div>
+							<div>
+								<a href="#">XML</a>
+							</div>
+						</nav>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Подписка</div>
+					<div class="content">
+						<div id="subscribe_vk">
+							<div id="subscribe">
+								<p>Подписавшись по <b>E-mail</b>, Вы будете получать уведомления о новых статьях.</p>
+								<img src="images/icon_rss.png" alt="Подписка" />
+								<a href="#" class="button">Подписаться</a>
+							</div>
+							<div class="clear"></div>
+							<img id="subscribe_vk_sep" src="images/menu_sep.png" alt="" />
+							<div class="clear"></div>
+							<div id="vk">
+								<p>Добавляйтесь ко мне в друзья <b>ВКонтакте</b>! Отзывы о сайте и обо мне оставляйте на стене моего аккаунта.</p>
+								<img src="images/icon_vk.png" alt="Мой аккаунт" />
+								<a href="#" class="button">Мой аккаунт</a>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Опрос</div>
+					<div class="content">
+						<div id="poll">
+							<p>Ваша любимая рубрика?</p>
+							<form name="poll" action="#" method="post">
+								<div>
+									<input id="poll_id_1" type="radio" name="poll_id" value="1" />
+									<label for="poll_id_1">HTML</label>
+								</div>
+								<div>
+									<input id="poll_id_2" type="radio" name="poll_id" value="2" />
+									<label for="poll_id_2">CSS</label>
+								</div>
+								<div>
+									<input id="poll_id_3" type="radio" name="poll_id" value="3" />
+									<label for="poll_id_3">PHP</label>
+								</div>
+								<div>
+									<input id="poll_id_4" type="radio" name="poll_id" value="4" />
+									<label for="poll_id_4">MySQL</label>
+								</div>
+								<div>
+									<input type="submit" name="poll" value="Голосовать" class="button" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="right">
+				<div class="block">
+					<div class="header">Бесплатный курс</div>
+					<div class="content">
+						<div class="free">
+							<p class="title">Бесплатный Видеокурс по основам PHP</p>
+							<img src="images/freephp-cover.png" alt="Бесплатный Видеокурс по основам PHP" />
+							<p><b>Особенности Видеокурса:</b></p>
+							<p>- Создание реального PHP-сайта</p>
+							<p>- Регистрация и авторизация</p>
+							<p>- Гостевая книга</p>
+							<p>- Поиск по сайту</p>
+							<p class="center"><b>Чтобы получить Видеокурс,<br />заполните форму</b></p>
+							<form name="free_course" action="#" method="post">
+								<table>
+									<tr>
+										<td>
+											<label for="free_course_email">E-mail:</label>
+										</td>
+										<td>
+											<input id="free_course_email" type="text" name="email" />
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<label for="free_course_name">Имя:</label>
+										</td>
+										<td>
+											<input id="free_course_name" type="text" name="name" />
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="center">
+											<input type="submit" name="free_course" value="Получить курс" class="button" />
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Семинар</div>
+					<div class="content">
+						<div class="free">
+							<p class="title">Как создать профессиональный Интернет-магазин</p>
+							<img src="images/create-im.png" alt="Как создать профессиональный Интернет-магазин" />
+							<p><b>После семинара:</b></p>
+							<p>- Вы будете знать, как создать Интернет-магазин.</p>
+							<p>- Вы получите бесплатный подарок с подробным описанием каждого шага.</p>
+							<p>- Вы сможете уже приступить к созданию Интернет-магазина.</p>
+							<div class="center">
+								<a href="#" class="button">Записаться</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block">
+					<div class="header">Умные цитаты</div>
+					<div class="content">
+						<div id="quote">
+							<p>Ты никогда не решишь проблему, если будешь думать так же, как те, кто ее создал.</p>
+							<p class="right"><i>Альберт Эйнштейн</i></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="center">
+				<div class="main">
+					<nav>
+						<p>Вы здесь: Главная</p>
+					</nav>
+					<article>
+						<h1>Как создать свой сайт</h1>
+						<div class="article_img">
+							<img src="images/site.png" alt="Как создать свой сайт" />
+						</div>
+						<p><b>Как создать свой сайт</b> – этот вопрос задаёт себе огромное количество людей, недаром он вводится только в одном Yandex примерно 1000 раз в сутки. Не меньше сайтов пытаются ответить на этот вопрос. Я видел много страниц, посвящённых теме создания сайта, его регистрации и раскрутки. Но я за свою практику не встретил ни одного сайта, который объединил бы все эти неразделимые темы воедино. </p>
+						<p>И для восполнения этого пробела и был создан данный сайт. На этом сайте Вы сможете найти массу информации по теме: <b>как создать сайт, как раскрутить свой сайт</b>.</p> 
+						<p><span class="red">Но прежде, чем Вы будете знакомиться с темой создания и раскрутки сайта, я хочу Вас предупредить о следующем:</span></p>
+						<p><b>1)</b> Многие думают, что создать сайт – это очень просто и быстро. И самое интересное, что в чём-то они правы. Действительно, существует большое количество CMS (систем управления контентом), которые позволяют создать сайт буквально за считанные минуты. Но вынужден Вас огорчить: создать сайт – это дело часто быстрое, а вот наполнить его полезным содержимым – дело, порой, нескольких лет.</p>
+						<p><b>2)</b> Многие думают, что создать сайт – это очень сложно. Опять же – всё относительно. Смотря, какой сайт. Создать сайт на какой-нибудь CMS – очень просто, а вот разработать огромный портал с нуля да ещё и с кучей PHP-скриптов – это дело весьма сложное.</p>
+						<p>И те, и другие в чём-то правы, а в чём-то нет. Но я хочу, чтобы Вы усвоили: создание сайта – это дело, которое способен освоить практически любой человек, даже школьник, но чтобы стать профессионалом - придётся много работать. И данный портал поможет Вам освоить данную науку, причём Вы узнаете о том, как создать сложный сайт с использованием PHP и MySQL и, быть может, с использованием XML, и как создать простой сайт с использованием CMS. А после создания Вы сможете разместить свой сайт в Интернете, а после уже узнаете, как раскрутить сайт и сможете вывести свой сайт в TOP Yandex.</p>
+						<p><span class="red">А теперь об этом портале. Если Вы хотите создать свой собственный сайт, то тогда Вам необходимо изучить следующие разделы:</span></p>
+						<p><b>1)</b> <a href="#">HTML</a>. Это язык, который является основой любого сайта, поэтому его просто необходимо знать.</p>
+						<p><b>2)</b> <a href="#">CSS</a>. Язык, без которого практически немыслим дизайн сайта.</p>
+						<p><b>3)</b> <a href="#">JavaScript</a>. Это язык, позволяющий писать различные скрипты, например, проверка введённых данных в форму, делать выпадающие меню, делать красивый и динамический сайт.</p>
+						<p><b>4)</b> <a href="#">PHP</a>. Этот язык является самым популярным по программированию Web-серверов. В частности, можно писать скрипты авторизации и регистрации пользователей, принимать и обрабатывать данные из формы, реализовывать поиск по сайту, делать собственные движки, другими словами, примеров использования PHP – бесчисленное множество.</p>
+					</article>
+				</div>
+				<div class="main">
+					<h2 class="h1">Свежие статьи</h2>
+					<section>
+						<div class="article_img">
+							<img src="images/article_img.jpg" alt="Где лучше купить выделенный сервер?" />
+							<div>
+								<img class="date_img" src="images/date.png" alt="" />
+								<div class="date_text">25<br />янв</div>
+							</div>
+						</div>
+						<h2>Где лучше купить выделенный сервер</h2>
+						<p>В этой статье я расскажу Вам свою небольшую историю, а в конце расскажу, где лучше купить выделенный сервер. А теперь приступлю к своей истории. Всё началось с того, что мне надоело платить за Amazon S3, поскольку счета оттуда стали приходить стабильно по 200$ в месяц. А в некоторые месяцы доходили и до 500$. Если, кто не знает, то Amazon S3 - это хранилище файлов. Вы туда загружаете файлы, получаете прямые ссылки и даёте их своим клиентам. Они скачивают Ваши материалы, а Вы платите за каждый МБ. Цена 1 ГБ в районе 9-12 центов, но всё зависит от общего трафика за месяц. Чем больше скачивают, тем меньше цена за каждый ГБ.</p>
+						<a class="more" href="#">Прочитать</a>
+						<div class="clear"></div>
+						<div class="article_info">
+							<ul>
+								<li>
+									<img src="images/icon_user.png" alt="" />
+								</li>
+								<li>Михаил Русаков</li>
+								<li>2 комментария</li>
+								<li>
+									<a href="#">PHP</a>
+								</li>
+								<li>
+									<a href="#">PHP Основы</a>
+								</li>
+							</ul>
+						<div class="clear"></div>
+						</div>
+					</section>
+					<section>
+						<div class="article_img">
+							<img src="images/article_img.jpg" alt="Где лучше купить выделенный сервер?" />
+							<div>
+								<img class="date_img" src="images/date.png" alt="" />
+								<div class="date_text">25<br />янв</div>
+							</div>
+						</div>
+						<h2>Где лучше купить выделенный сервер</h2>
+						<p>В этой статье я расскажу Вам свою небольшую историю, а в конце расскажу, где лучше купить выделенный сервер. А теперь приступлю к своей истории. Всё началось с того, что мне надоело платить за Amazon S3, поскольку счета оттуда стали приходить стабильно по 200$ в месяц. А в некоторые месяцы доходили и до 500$. Если, кто не знает, то Amazon S3 - это хранилище файлов. Вы туда загружаете файлы, получаете прямые ссылки и даёте их своим клиентам. Они скачивают Ваши материалы, а Вы платите за каждый МБ. Цена 1 ГБ в районе 9-12 центов, но всё зависит от общего трафика за месяц. Чем больше скачивают, тем меньше цена за каждый ГБ.</p>
+						<a class="more" href="#">Прочитать</a>
+						<div class="clear"></div>
+						<div class="article_info">
+							<ul>
+								<li>
+									<img src="images/icon_user.png" alt="" />
+								</li>
+								<li>Михаил Русаков</li>
+								<li>2 комментария</li>
+								<li>
+									<a href="#">PHP</a>
+								</li>
+								<li>
+									<a href="#">PHP Основы</a>
+								</li>
+							</ul>
+						<div class="clear"></div>
+						</div>
+					</section>
+					<section>
+						<div class="article_img">
+							<img src="images/article_img.jpg" alt="Где лучше купить выделенный сервер?" />
+							<div>
+								<img class="date_img" src="images/date.png" alt="" />
+								<div class="date_text">25<br />янв</div>
+							</div>
+						</div>
+						<h2>Где лучше купить выделенный сервер</h2>
+						<p>В этой статье я расскажу Вам свою небольшую историю, а в конце расскажу, где лучше купить выделенный сервер. А теперь приступлю к своей истории. Всё началось с того, что мне надоело платить за Amazon S3, поскольку счета оттуда стали приходить стабильно по 200$ в месяц. А в некоторые месяцы доходили и до 500$. Если, кто не знает, то Amazon S3 - это хранилище файлов. Вы туда загружаете файлы, получаете прямые ссылки и даёте их своим клиентам. Они скачивают Ваши материалы, а Вы платите за каждый МБ. Цена 1 ГБ в районе 9-12 центов, но всё зависит от общего трафика за месяц. Чем больше скачивают, тем меньше цена за каждый ГБ.</p>
+						<a class="more" href="#">Прочитать</a>
+						<div class="clear"></div>
+						<div class="article_info">
+							<ul>
+								<li>
+									<img src="images/icon_user.png" alt="" />
+								</li>
+								<li>Михаил Русаков</li>
+								<li>2 комментария</li>
+								<li>
+									<a href="#">PHP</a>
+								</li>
+								<li>
+									<a href="#">PHP Основы</a>
+								</li>
+							</ul>
+						<div class="clear"></div>
+						</div>
+					</section>
+					<div id="pagination">
+						<span>Первая</span>
+						<span>Предыдущая</span>
+						<span class="active">1</span>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">Следующая</a>
+						<a href="#">Последняя</a>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<footer>
+			<div class="sep"></div>
+			<!-- Yandex.Metrika counter -->
+			<div style="display:none;">
+				<script type="text/javascript">
+					(function(w, c) {
+						(w[c] = w[c] || []).push(function() {
+						   try {
+							  w.yaCounter3932665 = new Ya.Metrika(3932665);
+							   yaCounter3932665.clickmap(true);
+							   yaCounter3932665.trackLinks(true);     
+						   } catch(e) { }
+					   });
+					})(window, 'yandex_metrika_callbacks');
+				</script>
+			</div>
+			<script src="/mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+			<noscript>
+				<div style="position:absolute">
+					<img src="/mc.yandex.ru/watch/3932665" alt="" />
+				</div>
+			</noscript>
+			<!-- /Yandex.Metrika counter -->
+			<!--LiveInternet counter-->
+			<script type="text/javascript">
+			<!--
+				document.write("<a href='http://www.liveinternet.ru/click' "+
+				"target=_blank><img src='//counter.yadro.ru/hit?t21.11;r"+
+				escape(document.referrer)+((typeof(screen)=="undefined")?"":
+				";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+				screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+				";"+Math.random()+
+				"' alt='' title='LiveInternet: показано число просмотров за 24"+
+				" часа, посетителей за 24 часа и за сегодня' "+
+				"border='0' width='88' height='31'><\/a>")
+			//-->
+			</script>
+			<!--/LiveInternet-->
+			<!-- Rating@Mail.ru counter -->
+			<script type="text/javascript">
+				//<![CDATA[
+				var a='';js=10;d=document;
+				try{a+=';r='+escape(d.referrer);}catch(e){}try{a+=';j='+navigator.javaEnabled();js=11;}catch(e){}
+				try{s=screen;a+=';s='+s.width+'*'+s.height;a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth);js=12;}catch(e){}
+				try{if(typeof((new Array).push('t'))==="number")js=13;}catch(e){}
+				try{d.write('<a href="http://top.mail.ru/jump?from=1883459"><img src="http://dd.cb.bc.a1.top.mail.ru/counter?id=1883459;t=230;js='+js+
+				a+';rand='+Math.random()+'" alt="Рейтинг@Mail.ru" style="border:0;" height="31" width="88" \/><\/a>');}catch(e){}
+				//]]>
+			</script>
+			<noscript>
+				<p>
+					<a href="http://top.mail.ru/jump?from=1883459">
+						<img src="http://dd.cb.bc.a1.top.mail.ru/counter?js=na;id=1883459;t=230" style="border: 0; height: 31px; width: 88px;"
+						alt="Рейтинг@Mail.ru" />
+					</a>
+				</p>
+			</noscript>
+			<!-- //Rating@Mail.ru counter -->
+			<!-- begin of Top100 code -->
+			<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2243752"></script>
+			<noscript>
+				<p>
+					<a href="http://top100.rambler.ru/navi/2243752/">
+						<img src="http://counter.rambler.ru/top100.cnt?2243752" alt="Rambler's Top100" />
+					</a>
+				</p>
+			</noscript>
+			<!-- end of Top100 code -->
+			<p>Copyright &copy; 2010-2014 Русаков Михаил. Все права защищены.</p>
+		</footer>
+	</div>
+</body>
+</html>
