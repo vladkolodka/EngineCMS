@@ -13,7 +13,7 @@ abstract class AbstractController{
         $this->fp = new FormProcessor($this->request, $message);
         $this->auth_user = $this->authUser();
 
-        if($this->access()){
+        if(!$this->access()){
             $this->accessDenied();
             throw new Exception("ACCESS_DENIED");
         }

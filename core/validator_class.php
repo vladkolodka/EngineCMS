@@ -17,7 +17,7 @@ abstract class Validator{
     public function isValid(){
         return count($this->errors) == 0;
     }
-    public function setError($err_text){
+    protected function setError($err_text){
         $this->errors[] = $err_text;
     }
     protected function isContainQuotes($str){

@@ -239,13 +239,13 @@ abstract class AbstractObjectDB{
 	}
 
 	protected function preInsert(){
-		return true;
+		return $this->validate();
 	}
 	protected function postInsert(){
 		return true;
 	}
 	protected function preUpdate(){
-		return true;
+		return $this->validate();
 	}
 	protected function postUpdate(){
 		return true;
@@ -290,5 +290,5 @@ abstract class AbstractObjectDB{
 	}
 
 	// TODO методы для поиска
-	// TODO почему используется $this->table_name если есть $class::%table
+	// TODO почему используется $this->table_name если есть $class::$table
 }
